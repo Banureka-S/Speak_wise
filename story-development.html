@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SpeakWise | Story Development</title>
+
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="./story.css">
+
+    <!-- Connect JavaScript -->
+    <script src="./story.js" defer></script>
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <a href="./index.html" class="logo">
+            Speak<span>Wise</span>
+        </a>
+
+        <nav>
+            <a href="./index.html">Tongue Twister</a>
+            <a href="./conversation.html">Conversation</a>
+            <a href="./story.html" class="active">Story Development</a>
+        </nav>
+
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <span class="badge">📖 CREATIVE SPEAKING</span>
+
+            <h1>Create Your Own <span>Story.</span></h1>
+
+            <p>
+                Turn simple ideas into interesting stories.
+                Improve your imagination, storytelling, and English communication.
+            </p>
+        </section>
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <span class="stat-icon">📚</span>
+                <p>Stories Practiced</p>
+                <h2 id="storyCount">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-icon">✍️</span>
+                <p>Words Written</p>
+                <h2 id="wordCount">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-icon">⭐</span>
+                <p>Last Score</p>
+                <h2 id="lastScore">--</h2>
+            </div>
+
+        </section>
+
+        <section class="practice-card">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="small-label">YOUR STORY CHALLENGE</span>
+                    <h2 id="storyTitle">The Mysterious Box</h2>
+                </div>
+
+                <span class="question-number" id="storyNumber">
+                    01 / 05
+                </span>
+
+            </div>
+
+            <div class="prompt-box">
+
+                <span class="prompt-icon">🌟</span>
+
+                <div>
+                    <h3>Start Your Story</h3>
+
+                    <p id="storyPrompt">
+                        One morning, you found a mysterious box outside your door...
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="tips">
+
+                <strong>✨ Build an Interesting Story</strong>
+
+                <ul>
+                    <li><strong>Beginning:</strong> Introduce the characters and place.</li>
+                    <li><strong>Middle:</strong> Describe the problem or exciting event.</li>
+                    <li><strong>Ending:</strong> Explain what happened at the end.</li>
+                </ul>
+
+            </div>
+
+            <label for="answerInput" class="input-label">
+                Write or Speak Your Story
+            </label>
+
+            <textarea
+                id="answerInput"
+                rows="9"
+                placeholder="Once upon a time... Start creating your story here!"
+            ></textarea>
+
+            <div class="input-info">
+                <span id="wordCounter">0 words</span>
+                <span id="speechStatus">Ready to create</span>
+            </div>
+
+            <div class="button-row">
+
+                <button
+                    type="button"
+                    id="voiceButton"
+                    class="btn btn-secondary"
+                >
+                    🎙️ Speak Story
+                </button>
+
+                <button
+                    type="button"
+                    id="evaluateButton"
+                    class="btn btn-primary"
+                >
+                    ✨ Evaluate Story
+                </button>
+
+                <button
+                    type="button"
+                    id="sampleButton"
+                    class="btn btn-secondary"
+                >
+                    📖 View Sample
+                </button>
+
+            </div>
+
+            <div id="sampleBox" class="sample-box hidden">
+
+                <h3>📚 Sample Story</h3>
+
+                <p id="sampleText"></p>
+
+                <p class="sample-note">
+                    Use this sample for inspiration. Create your own story
+                    using your own ideas!
+                </p>
+
+            </div>
+
+            <div id="feedbackBox" class="feedback hidden">
+
+                <h3>Your Story Feedback</h3>
+
+                <div class="score-circle">
+                    <span id="scoreValue">0</span>
+                    <small>/100</small>
+                </div>
+
+                <p id="feedbackMessage"></p>
+
+                <div class="feedback-details">
+
+                    <div>
+                        <strong>Words</strong>
+                        <span id="resultWords">0</span>
+                    </div>
+
+                    <div>
+                        <strong>Sentences</strong>
+                        <span id="resultSentences">0</span>
+                    </div>
+
+                </div>
+
+                <div class="suggestion-box">
+                    <strong>💡 How to Improve</strong>
+                    <p id="improvementTip"></p>
+                </div>
+
+                <button
+                    type="button"
+                    id="nextButton"
+                    class="btn btn-primary"
+                >
+                    Next Story →
+                </button>
+
+            </div>
+
+        </section>
+
+        <section class="bottom-note">
+            <span>🚀</span>
+
+            <p>
+                Every great storyteller starts with one idea.
+                Imagine freely, organize your thoughts, and tell your story!
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            © 2026 SpeakWise · Imagine It. Create It. Tell It.
+        </p>
+    </footer>
+
+</body>
+</html>

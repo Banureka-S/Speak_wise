@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SpeakWise | Paragraph Reading</title>
+
+    <link rel="stylesheet" href="paragraph-reading.css">
+    <script src="paragraph-reading.js" defer></script>
+</head>
+
+<body>
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <header class="topbar">
+        <a href="index.html" class="brand">
+            <span class="brand-icon">✦</span>
+            SpeakWise
+        </a>
+
+        <div class="header-stats">
+            <div class="stat">🔥 <span id="streak">1</span></div>
+            <div class="stat">⚡ <span id="xp">0</span> XP</div>
+        </div>
+
+        <a href="index.html" class="home-btn">⌂ Home</a>
+    </header>
+
+    <main class="page-container">
+
+        <section class="hero">
+            <div class="hero-content">
+                <span class="eyebrow">YOUR SPEAKING JOURNEY</span>
+
+                <h1>Paragraph <span>Reading</span></h1>
+
+                <p>
+                    Read aloud, improve your fluency, and let your confidence shine.
+                    One paragraph at a time!
+                </p>
+
+                <div class="hero-tags">
+                    <span>🎙️ Voice Practice</span>
+                    <span>📚 20 Levels</span>
+                    <span>🏆 Earn XP</span>
+                </div>
+            </div>
+
+            <div class="mascot">
+                <div class="mascot-orbit orbit-one"></div>
+                <div class="mascot-orbit orbit-two"></div>
+                <div class="mascot-face">
+                    <div class="mascot-eyes">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="mascot-mouth"></div>
+                    <div class="mascot-cheek cheek-left"></div>
+                    <div class="mascot-cheek cheek-right"></div>
+                </div>
+                <div class="mascot-caption">Let's read! ✨</div>
+            </div>
+        </section>
+
+        <section class="progress-panel">
+            <div class="progress-heading">
+                <div>
+                    <h2>Your Reading Journey</h2>
+                    <p>Every little step makes you a better speaker.</p>
+                </div>
+
+                <div class="level-counter">
+                    <span id="completedCount">0</span>/20
+                    <small>LEVELS</small>
+                </div>
+            </div>
+
+            <div class="progress-track">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+
+            <div class="progress-label">
+                <span>🌱 Beginner to Confident Speaker</span>
+                <span id="progressPercent">0%</span>
+            </div>
+        </section>
+
+        <section class="practice-layout">
+
+            <div class="reading-card">
+
+                <div class="card-topline">
+                    <span class="section-label">📖 READING STUDIO</span>
+                    <span class="difficulty" id="difficulty">BEGINNER</span>
+                </div>
+
+                <div class="challenge-heading">
+                    <div>
+                        <span class="level-label" id="levelLabel">LEVEL 01</span>
+                        <h2 id="paragraphTitle">A Beautiful Morning</h2>
+                    </div>
+
+                    <div class="level-medal" id="levelMedal">01</div>
+                </div>
+
+                <div class="reading-text" id="readingText">
+                    Every morning is a new beginning. The sun rises slowly,
+                    birds sing sweet songs, and the world wakes up with hope.
+                </div>
+
+                <div class="reading-tools">
+                    <button class="secondary-btn" id="listenBtn">
+                        🔊 Listen to Paragraph
+                    </button>
+
+                    <button class="secondary-btn" id="slowListenBtn">
+                        🐢 Slow Voice
+                    </button>
+                </div>
+
+                <div class="voice-panel">
+                    <div class="voice-heading">
+                        <div class="mic-symbol" id="micSymbol">🎙️</div>
+
+                        <div>
+                            <h3 id="recordTitle">Ready to read?</h3>
+                            <p id="recordDescription">
+                                Press the button and read aloud clearly.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="waveform" id="waveform">
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                    </div>
+
+                    <div class="record-actions">
+                        <button class="record-btn" id="recordBtn">
+                            <span class="record-dot"></span>
+                            <span id="recordBtnText">Start Speaking</span>
+                        </button>
+
+                        <span class="timer" id="timer">00:00</span>
+                    </div>
+
+                    <div class="live-status" id="liveStatus">
+                        Your microphone is waiting...
+                    </div>
+                </div>
+
+                <div class="transcript-section">
+                    <div class="transcript-heading">
+                        <h3>📝 Your Speech</h3>
+                        <span class="live-badge">LIVE TRANSCRIPTION</span>
+                    </div>
+
+                    <div class="transcript-box" id="transcript">
+                        Your spoken words will appear here automatically...
+                    </div>
+
+                    <div class="audio-actions">
+                        <button class="secondary-btn" id="playAudioBtn" disabled>
+                            ▶ Play My Recording
+                        </button>
+
+                        <button class="secondary-btn" id="clearBtn">
+                            ↻ Try Again
+                        </button>
+                    </div>
+                </div>
+
+                <div class="feedback-message" id="feedbackMessage">
+                    💜 Take a deep breath. You can do this!
+                </div>
+
+                <div class="main-actions">
+                    <button class="analyze-btn" id="analyzeBtn">
+                        ✨ Check My Reading
+                    </button>
+                </div>
+
+                <div class="results-panel" id="resultsPanel" hidden>
+                    <div class="result-top">
+                        <div class="result-ring" id="resultRing">
+                            <span id="accuracyScore">0%</span>
+                        </div>
+
+                        <div class="result-summary">
+                            <span class="eyebrow">YOUR PERFORMANCE</span>
+                            <h2 id="resultTitle">Good Effort!</h2>
+                            <p id="resultDescription"></p>
+                        </div>
+                    </div>
+
+                    <div class="result-grid">
+                        <div class="result-item">
+                            <span>✅</span>
+                            <strong id="correctWords">0</strong>
+                            <small>Correct Words</small>
+                        </div>
+
+                        <div class="result-item">
+                            <span>🎯</span>
+                            <strong id="missedWords">0</strong>
+                            <small>Missed Words</small>
+                        </div>
+
+                        <div class="result-item">
+                            <span>⚡</span>
+                            <strong id="earnedXP">0</strong>
+                            <small>XP Earned</small>
+                        </div>
+                    </div>
+
+                    <div class="word-review">
+                        <h3>Word-by-Word Review</h3>
+                        <p class="review-hint">
+                            Green = recognized correctly · Red = missed
+                        </p>
+                        <div id="wordReview" class="word-review-content"></div>
+                    </div>
+
+                    <div class="unlock-message" id="unlockMessage" hidden>
+                        🎉 LEVEL COMPLETED! Your next challenge is unlocked!
+                    </div>
+
+                    <button class="next-btn" id="nextBtn">
+                        Continue to Next Level →
+                    </button>
+                </div>
+
+            </div>
+
+            <aside class="journey-card">
+
+                <div class="journey-header">
+                    <div>
+                        <span class="section-label">YOUR PATH</span>
+                        <h2>Reading Levels</h2>
+                    </div>
+                    <span class="journey-icon">🌟</span>
+                </div>
+
+                <p class="journey-description">
+                    Complete a level to unlock the next one.
+                </p>
+
+                <div class="level-path" id="levelPath"></div>
+
+                <div class="legend">
+                    <span><i class="legend-dot completed-dot"></i> Completed</span>
+                    <span><i class="legend-dot current-dot"></i> Current</span>
+                    <span><i class="legend-dot locked-dot"></i> Locked</span>
+                </div>
+
+            </aside>
+
+        </section>
+
+        <footer class="footer">
+            <div class="footer-logo">✦ SpeakWise</div>
+            <p>Practice a little. Improve a lot. Speak with confidence.</p>
+            <a href="index.html">← Back to Home</a>
+        </footer>
+
+    </main>
+
+    <div class="toast" id="toast"></div>
+
+    <div class="celebration-overlay" id="celebrationOverlay" hidden>
+        <div class="celebration-card">
+            <div class="celebration-icon">🎉</div>
+            <h2 id="celebrationTitle">Amazing Work!</h2>
+            <p id="celebrationText">You have completed this level.</p>
+            <button id="celebrationBtn">Continue ✨</button>
+        </div>
+        <div class="confetti-container" id="confettiContainer"></div>
+    </div>
+
+</body>
+</html>

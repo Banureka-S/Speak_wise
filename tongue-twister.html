@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Practice English pronunciation with 20 exciting SpeakWise tongue-twister levels."
+    >
+
+    <title>Tongue Twister | SpeakWise</title>
+
+    <link rel="stylesheet" href="tongue-twister.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <div class="ambient ambient-three"></div>
+
+    <!-- NAVIGATION -->
+    <header class="topbar">
+
+        <a href="index.html" class="brand">
+            <div class="brand-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <span>Speak<span class="brand-highlight">Wise</span></span>
+        </a>
+
+        <a href="index.html" class="back-home">
+            <span>←</span>
+            Back to Home
+        </a>
+
+        <div class="top-xp">
+            <span>⚡</span>
+            <strong id="topXP">0 XP</strong>
+        </div>
+
+    </header>
+
+
+    <main class="page-container">
+
+        <!-- PAGE HEADING -->
+        <section class="page-heading">
+
+            <div class="heading-copy">
+
+                <div class="eyebrow">
+                    <span class="live-dot"></span>
+                    SPEAKING LAB / 01
+                </div>
+
+                <h1>
+                    Twist your tongue.<br>
+                    <span>Train your voice.</span>
+                </h1>
+
+                <p>
+                    Practice tricky English sounds, speak clearly
+                    and build your pronunciation confidence one
+                    challenge at a time.
+                </p>
+
+                <div class="heading-stats">
+
+                    <div class="heading-stat">
+                        <span class="stat-emoji">🎯</span>
+                        <span>20 levels</span>
+                    </div>
+
+                    <div class="heading-stat">
+                        <span class="stat-emoji">🎙️</span>
+                        <span>Voice practice</span>
+                    </div>
+
+                    <div class="heading-stat">
+                        <span class="stat-emoji">🏆</span>
+                        <span>Earn XP</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SOUND VISUAL -->
+            <div class="sound-visual" aria-hidden="true">
+
+                <div class="sound-ring ring-one"></div>
+                <div class="sound-ring ring-two"></div>
+                <div class="sound-ring ring-three"></div>
+
+                <div class="sound-center">
+                    <div class="sound-mic">🎙️</div>
+                </div>
+
+                <div class="visual-word word-one">S</div>
+                <div class="visual-word word-two">SH</div>
+                <div class="visual-word word-three">TH</div>
+
+                <div class="visual-wave">
+                    <span></span><span></span><span></span>
+                    <span></span><span></span><span></span>
+                    <span></span><span></span><span></span>
+                    <span></span><span></span><span></span>
+                    <span></span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- OVERALL PROGRESS -->
+        <section class="overview-card">
+
+            <div class="overview-left">
+
+                <div class="overview-icon">🚀</div>
+
+                <div>
+                    <h2>Your pronunciation journey</h2>
+                    <p id="overallText">Start your first challenge!</p>
+                </div>
+
+            </div>
+
+            <div class="overview-right">
+
+                <div class="overview-number">
+                    <strong id="completedLevels">0</strong>
+                    <span>/ 20 completed</span>
+                </div>
+
+                <div class="overview-track">
+                    <div class="overview-fill" id="overallBar"></div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MAIN EXERCISE LAYOUT -->
+        <section class="practice-layout">
+
+            <!-- LEVEL SIDEBAR -->
+            <aside class="levels-panel">
+
+                <div class="panel-heading">
+                    <div>
+                        <span class="small-label">YOUR PATH</span>
+                        <h2>20 Levels</h2>
+                    </div>
+
+                    <span class="levels-badge">👑</span>
+                </div>
+
+                <p class="levels-description">
+                    Complete a challenge to unlock the next level.
+                </p>
+
+                <div class="level-path" id="levelPath">
+                    <!-- Levels are created using JavaScript -->
+                </div>
+
+                <div class="legend">
+
+                    <div>
+                        <span class="legend-dot completed-dot"></span>
+                        Completed
+                    </div>
+
+                    <div>
+                        <span class="legend-dot current-dot"></span>
+                        Current
+                    </div>
+
+                    <div>
+                        <span class="legend-dot locked-dot"></span>
+                        Locked
+                    </div>
+
+                </div>
+
+            </aside>
+
+
+            <!-- PRACTICE AREA -->
+            <section class="practice-panel">
+
+                <div class="practice-header">
+
+                    <div>
+                        <span class="small-label" id="levelCategory">
+                            LEVEL 01 / BEGINNER
+                        </span>
+
+                        <h2 id="challengeTitle">
+                            The First Twist
+                        </h2>
+                    </div>
+
+                    <div class="difficulty-badge" id="difficultyBadge">
+                        ⭐ Beginner
+                    </div>
+
+                </div>
+
+
+                <!-- Challenge Card -->
+                <div class="challenge-card">
+
+                    <div class="challenge-decoration decoration-a"></div>
+                    <div class="challenge-decoration decoration-b"></div>
+
+                    <div class="challenge-card-top">
+                        <span>YOUR CHALLENGE</span>
+                        <span class="challenge-number" id="challengeNumber">
+                            01
+                        </span>
+                    </div>
+
+                    <div class="twister-text" id="twisterText">
+                        She sells seashells by the seashore.
+                    </div>
+
+                    <div class="challenge-hint" id="challengeHint">
+                        💡 Tip: Speak slowly and clearly.
+                    </div>
+
+                    <div class="challenge-actions">
+
+                        <button
+                            class="listen-button"
+                            id="listenButton"
+                            type="button"
+                        >
+                            <span>🔊</span>
+                            Listen
+                        </button>
+
+                        <button
+                            class="slow-button"
+                            id="slowButton"
+                            type="button"
+                        >
+                            <span>🐢</span>
+                            Slow audio
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RECORDING -->
+                <div class="recording-card">
+
+                    <div class="recording-heading">
+
+                        <div>
+                            <span class="small-label">YOUR TURN</span>
+                            <h3>Speak it out loud</h3>
+                        </div>
+
+                        <div class="recording-status" id="recordingStatus">
+                            <span class="status-dot"></span>
+                            Ready
+                        </div>
+
+                    </div>
+
+
+                    <div class="mic-section">
+
+                        <div class="mic-orbit orbit-a"></div>
+                        <div class="mic-orbit orbit-b"></div>
+
+                        <button
+                            class="mic-button"
+                            id="recordButton"
+                            type="button"
+                            aria-label="Start speaking"
+                        >
+                            <span id="micIcon">🎙️</span>
+                        </button>
+
+                        <div class="mic-wave" id="micWave" aria-hidden="true">
+                            <span></span><span></span><span></span>
+                            <span></span><span></span><span></span>
+                            <span></span><span></span><span></span>
+                            <span></span><span></span><span></span>
+                            <span></span>
+                        </div>
+
+                    </div>
+
+                    <p class="mic-instruction" id="micInstruction">
+                        Tap the microphone and start speaking.
+                    </p>
+
+                    <p class="microphone-note">
+                        🎧 Allow microphone access when your browser asks.
+                    </p>
+
+
+                    <!-- LIVE TRANSCRIPT -->
+                    <div class="transcript-box">
+
+                        <div class="transcript-heading">
+
+                            <div>
+                                <span class="transcript-live-dot" id="transcriptDot"></span>
+                                <strong>Live transcript</strong>
+                            </div>
+
+                            <span id="transcriptState">Waiting for speech</span>
+
+                        </div>
+
+                        <div
+                            class="transcript-text"
+                            id="transcriptText"
+                            aria-live="polite"
+                            aria-atomic="true"
+                        >
+                            Your spoken words will appear here automatically...
+                        </div>
+
+                    </div>
+
+
+                    <!-- RECORDED AUDIO -->
+                    <div class="audio-playback" id="audioPlayback" hidden>
+
+                        <div class="audio-playback-info">
+                            <span class="audio-icon">🎧</span>
+
+                            <div>
+                                <strong>Your recording</strong>
+                                <p>Listen to your recorded voice.</p>
+                            </div>
+                        </div>
+
+                        <audio id="recordedAudio" controls></audio>
+
+                    </div>
+
+
+                    <div class="recording-actions">
+
+                        <button
+                            class="analyze-button"
+                            id="analyzeButton"
+                            type="button"
+                            disabled
+                        >
+                            Analyze My Speech
+                            <span>→</span>
+                        </button>
+
+                        <button
+                            class="retry-button"
+                            id="retryButton"
+                            type="button"
+                        >
+                            ↻ Retry
+                        </button>
+
+                    </div>
+
+                    <p class="browser-note" id="browserNote">
+                        Speech recognition availability depends on your browser.
+                    </p>
+
+                </div>
+
+
+                <!-- RESULTS -->
+                <section class="results-card" id="resultsCard" hidden>
+
+                    <div class="results-top">
+
+                        <div>
+                            <span class="small-label">YOUR PERFORMANCE</span>
+                            <h2>Speech analysis</h2>
+                        </div>
+
+                        <div class="results-icon" id="resultsIcon">🎯</div>
+
+                    </div>
+
+
+                    <div class="score-grid">
+
+                        <div class="score-box main-score">
+
+                            <div class="score-circle" id="scoreCircle">
+                                <div>
+                                    <strong id="accuracyScore">0%</strong>
+                                    <span>Accuracy</span>
+                                </div>
+                            </div>
+
+                            <p>Text matching score</p>
+
+                        </div>
+
+
+                        <div class="score-box">
+
+                            <span class="score-emoji">✅</span>
+
+                            <strong id="correctWords">0</strong>
+
+                            <span>Matched words</span>
+
+                        </div>
+
+
+                        <div class="score-box">
+
+                            <span class="score-emoji">❌</span>
+
+                            <strong id="missedWords">0</strong>
+
+                            <span>Missed words</span>
+
+                        </div>
+
+
+                        <div class="score-box">
+
+                            <span class="score-emoji">⚡</span>
+
+                            <strong id="earnedXP">0</strong>
+
+                            <span>XP earned</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="feedback-box">
+
+                        <h3 id="feedbackTitle">Keep practicing!</h3>
+
+                        <p id="feedbackText"></p>
+
+                    </div>
+
+
+                    <div class="word-analysis">
+
+                        <h3>Word-by-word comparison</h3>
+
+                        <p class="word-legend">
+                            <span class="word-correct">Green = matched</span>
+                            <span class="word-missed">Red = missed or different</span>
+                        </p>
+
+                        <div
+                            class="word-comparison"
+                            id="wordComparison"
+                        ></div>
+
+                    </div>
+
+
+                    <div class="unlock-banner" id="unlockBanner" hidden>
+
+                        <div class="unlock-icon">🏆</div>
+
+                        <div>
+                            <h3 id="unlockTitle">LEVEL UNLOCKED!</h3>
+                            <p id="unlockMessage">
+                                Amazing work! Keep going.
+                            </p>
+                        </div>
+
+                        <div class="confetti" aria-hidden="true">
+                            ✦　✧　✦
+                        </div>
+
+                    </div>
+
+
+                    <div class="result-actions">
+
+                        <button
+                            class="next-button"
+                            id="nextButton"
+                            type="button"
+                        >
+                            Next Level
+                            <span>→</span>
+                        </button>
+
+                        <button
+                            class="result-retry-button"
+                            id="resultRetryButton"
+                            type="button"
+                        >
+                            Try Again
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+                <!-- DISCLAIMER -->
+                <div class="accuracy-note">
+                    <span>ℹ️</span>
+
+                    <p>
+                        Speech scores compare the words recognized by your
+                        browser with the target sentence. Background noise,
+                        accents and browser recognition errors can affect
+                        results. This is a practice aid, not a perfect
+                        pronunciation detector.
+                    </p>
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <!-- LEVEL UNLOCK POPUP -->
+    <div
+        class="modal-overlay"
+        id="unlockModal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+        hidden
+    >
+
+        <div class="unlock-modal">
+
+            <div class="modal-stars" aria-hidden="true">
+                ✦　✧　✦
+            </div>
+
+            <div class="modal-trophy">🏆</div>
+
+            <span class="modal-label">CHALLENGE COMPLETED</span>
+
+            <h2 id="modalTitle">LEVEL UNLOCKED!</h2>
+
+            <p id="modalMessage">
+                Great job! Your next challenge is ready.
+            </p>
+
+            <div class="modal-xp" id="modalXP">+20 XP</div>
+
+            <button
+                class="modal-continue"
+                id="modalContinue"
+                type="button"
+            >
+                Continue
+                <span>→</span>
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div
+        class="toast"
+        id="toast"
+        role="status"
+        aria-live="polite"
+    ></div>
+
+
+    <script src="tongue-twister.js"></script>
+
+</body>
+</html>
